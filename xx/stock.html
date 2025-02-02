@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Stock Entry</title>
+    <link rel="stylesheet" href="stock.css">
+</head>
+<body>
+    <div class="stock-entry-container">
+        <header>
+            <h1>Shah G Traders</h1>
+            <p>Shop No 168, Sheikhupura Road, Gujranwala</p>
+        </header>
+        <section class="stock-details">
+            <label for="stock-name">Stock Name:</label>
+            <input type="text" id="stock-name" placeholder="Enter Stock Name">
+            <label for="stock-quantity">Quantity:</label>
+            <input type="text" id="stock-quantity" placeholder="Enter Quantity">
+            <label for="stock-rate">Rate:</label>
+            <input type="text" id="stock-rate" placeholder="Enter Rate">
+            <button id="save-stock">Save Stock</button>
+        </section>
+        <section class="stock-records">
+            <h2>Previous Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stock Name</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th>Total</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="stock-table-body">
+                    <!-- Previous stock records will appear here -->
+                </tbody>
+                <tfoot>
+                    <tr class="total">
+                        <td colspan="3">Grand Total</td>
+                        <td id="grand-total">0</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </div>
+<script src="stock.js"></script>
+</body>
+</html>
