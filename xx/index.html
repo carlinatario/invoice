@@ -13,6 +13,11 @@
             <h5>Shop No 168 ,Sheikhupura Road Gujrawala</h5>
             <h5>Syed Sultan Haider: 0321 6475975</h5>
             <h5>Syed Awab Haider: 0322 6475975</h5>
+            <nav>
+                <a href="index.html">Invoice</a>
+                <a href="stock.html">Stock</a>
+                <a href="home.html">Home</a>
+            </nav>
         </header>
         <section class="invoice-details">
             <div>
@@ -20,15 +25,17 @@
                 <p><strong>Date:</strong> 15 Dec 2024</p>
             </div>
             <div class="costumerdata">
+                <form method="POST" action="index.php">
                 <p><strong>Billed To:</strong></p>
-                <label>Client Name</label>
+                <label>Client Name   </label>
                 <input type="text" id="costumername" placeholder="Name">
                 <br>
                 <label>Client Address</label>
                 <input type="text" id="costumeradress" placeholder="Address">
                 <br>
-                <label>Phone Number</label>
+                <label>Phone Number  </label>
                 <input type="text" id="costumerphoneno" placeholder="Phone No">
+                </form>
             </div>
         </section>
         <table>

@@ -1,38 +1,41 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e5e8eb;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .invoice-container {
   max-width: 900px;
-  margin: 20px auto;
-  background: #f5f37b;
-  border: 1px solid #5135cc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  line-height: normal;
-}
-.costumerdata {
-  text-align:left;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 25px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 header {
   text-align: center;
   margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out;
 }
 
 header h1 {
   margin: 0;
-  color: #333;
+  color: #5135cc;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 header p {
-  margin: 4px 0;
   color: #555;
-  font-size: 0.9em;
+  font-size: 1rem;
 }
 
 .invoice-details {
@@ -44,16 +47,18 @@ header p {
 .invoice-details p {
   margin: 10px 0;
   color: #333;
+  font-weight: 500;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 table thead {
-  background: #343a40;
+  background: #5135cc;
   color: white;
 }
 
@@ -62,10 +67,20 @@ table td {
   padding: 12px;
   text-align: left;
   border: 1px solid #ddd;
+  transition: background 0.3s ease-in-out;
 }
 
 table tbody tr:nth-child(even) {
   background: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background: #e0eafc;
+  transform: scale(1.01);
+}
+
+.costumerdata {
+  text-align: right;
 }
 
 footer {
@@ -73,4 +88,91 @@ footer {
   margin-top: 20px;
   color: #555;
   font-size: 0.9em;
+  font-weight: bold;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .invoice-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+  }
+
+  .invoice-details {
+    flex-direction: column;
+  }
+}
+
+/* Connect Page Styles */
+.connect-container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #ffffff;
+  border: 1px solid #5135cc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  text-align: center; /* Centering the contact info */
+}
+
+.contact-info h2 {
+  color: #343a40;
+  border-bottom: 2px solid #5135cc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 2rem auto; /* Moved below contact info */
+  transition: transform 0.2s ease;
+  max-width: 500px; /* Centering and limiting width */
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+}
+
+.contact-card h3 {
+  color: #5135cc;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .contact-info {
+    display: block; /* Removed grid so contact card appears below */
+  }
 }
