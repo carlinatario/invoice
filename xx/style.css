@@ -1,3 +1,36 @@
+.header-bar {
+  display: flex;              /* Use flexbox */
+  justify-content: space-between; /* Spread items apart */
+  align-items: center;        /* Align items vertically */
+  padding: 10px 20px;         /* Add some padding */
+  background-color: rgb(255, 255, 255);  /* Light background */
+}
+
+#logout a {
+  font-size: 16px;
+  color: #d9534f;  /* Red logout color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+#logout a:hover {
+  color: #c9302c; /* Darker red on hover */
+}
+
+.icons a {
+  font-size: 24px;    /* Bigger icons */
+  margin: 0 10px;     /* Add spacing between icons */
+  color: #4031ca;        /* Default icon color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.icons a:hover {
+  color: #007bff; /* Change color on hover */
+  transform: scale(1.2); /* Zoom effect */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -9,7 +42,10 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+#logout{
+  text-align: left;
 
+}
 .invoice-container {
   max-width: 900px;
   background: #ffffff;
