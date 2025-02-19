@@ -17,6 +17,9 @@
 #logout a:hover {
     color: #c9302c; /* Darker red on hover */
 }
+#v{
+     text-align: right;
+}
 
 .icons a {
     font-size: 24px;    /* Bigger icons */
@@ -145,6 +148,89 @@ button:hover {
     }
 
     button {
+        font-size: 1rem;
+    }
+}
+/* Filter Section */
+.filters {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 350px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Filter Group Styling */
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.filter-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.filter-group input:focus {
+    border-color: #5135cc;
+    box-shadow: 0 0 8px rgba(81, 53, 204, 0.4);
+    transform: scale(1.02);
+}
+
+/* Filter Button */
+.filter-button {
+    width: 100%;
+    padding: 12px;
+    background: #5135cc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-button i {
+    font-size: 1.2rem;
+}
+
+.filter-button:hover {
+    background: #3a24a5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(81, 53, 204, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .filters {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .filter-button {
         font-size: 1rem;
     }
 }

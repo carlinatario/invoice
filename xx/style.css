@@ -15,9 +15,35 @@
 }
 
 #logout a:hover {
-  color: #c9302c; /* Darker red on hover */
+  color: #661613; /* Darker red on hover */
 }
-
+#v{
+  text-align: right;
+}
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.remove-button, .add-button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.remove-button {
+  color:#4031ca;
+  border: none;
+  text-align: right;
+}
+.add-button {
+  color: #4031ca;
+  border: none;
+  text-align: right;
+}
+#mybutton {
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 .icons a {
   font-size: 24px;    /* Bigger icons */
   margin: 0 10px;     /* Add spacing between icons */
@@ -210,5 +236,139 @@ footer {
 @media (min-width: 768px) {
   .contact-info {
     display: block; /* Removed grid so contact card appears below */
+  }
+}
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Filters Section */
+.filters {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Filter Select & Input */
+.filters select,
+.filters input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 220px;
+}
+
+.filters input:focus {
+  border-color: #5135cc;
+  box-shadow: 0 0 8px rgba(81, 53, 204, 0.4);
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.filters button {
+  padding: 12px 20px;
+  background: #5135cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.filters button:hover {
+  background: #3a24a5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(81, 53, 204, 0.3);
+}
+
+.filters button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Table Styling */
+table {
+  width: 90%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  transition: background 0.3s ease-in-out;
+}
+
+table thead {
+  background: #5135cc;
+  color: white;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background: #e0eafc;
+  transform: scale(1.01);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .filters {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .filters select,
+  .filters input {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  table {
+      width: 100%;
+  }
+
+  table th, table td {
+      padding: 8px;
   }
 }

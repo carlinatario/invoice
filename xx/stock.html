@@ -4,72 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Stock Entry</title>
-    <link rel="stylesheet" href="stock.css"> 
-    
-                   <!-- Add this in the <head> section to include Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
+    <link rel="stylesheet" href="stock.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div class="stock-entry-container">
         <div class="header-bar">
             <h6 id="logout"><a href="logout.php">Logout</a></h6>
             <div class="icons">
-                <a href="home.html"><i class="fas fa-home"></i></a>  <!-- Home Icon -->
-                <a href="index.html"><i class="fas fa-file-invoice"></i></a>  <!-- Invoice Icon -->
-                <a href="stock.html"><i class="fas fa-boxes"></i></a>  <!-- Stock Icon -->
+                <a href="home.html"><i class="fas fa-home"></i></a>
+                <a href="invoice.html"><i class="fas fa-file-invoice"></i></a>
+                <a href="view_stock.php"><i class="fas fa-boxes"></i></a> <!-- Updated to view_stock.php -->
             </div>
-    </div>     
+        </div>     
+        <h6 id="v"><a href="view_stock.php">View Stock</a></h6>
         <header>
-           
             <h1>Shah G Traders</h1>
             <p>Shop No 168, Sheikhupura Road, Gujranwala</p>
-            <nav>
-              
-
-            </nav>
         </header>
+        
         <section class="stock-details">
-            <label for="seller-name">seller-name :</label>
-            <input type="text" id="seller-name" placeholder="Enter Seller Name" required>
+            <form id="stock-form">
+                <label for="seller-name">Seller Name:</label>
+                <input type="text" id="seller-name" placeholder="Enter Seller Name" required>
 
-            <label for="seller-phoneno">seller-phoneno:</label>
-            <input type="tel" id="seller-phoneno" placeholder="Enter Seller phone no" pattern="[0-9+\-\s]{10,11}" required>
+                <label for="seller-phoneno">Seller Phone No:</label>
+                <input type="tel" id="seller-phoneno" placeholder="Enter Seller Phone No" pattern="[0-9+\-\s]{10,11}" required>
 
-            <label for="stock-name">Stock Name:</label>
-            <input type="text" id="stock-name" placeholder="Enter Stock Name" required>
-            <label for="stock-quantity">Quantity:</label>
-            <input type="text" id="stock-quantity" placeholder="Enter Quantity" required>
-            <label for="stock-rate">Rate:</label>
-            <input type="text" id="stock-rate" placeholder="Enter Rate" required>
-            <button id="save-stock">Save Stock</button>
-        </section>
-        <section class="stock-records">
-            <h2>Previous Records</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Stock Name</th>
-                        <th>Quantity</th>
-                        <th>Rate</th>
-                        <th>Total</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody id="stock-table-body">
-                    <!-- Previous stock records will appear here -->
-                </tbody>
-                <tfoot>
-                    <tr class="total">
-                        <td colspan="3">Grand Total</td>
-                        <td id="grand-total">0</td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-            </table>
+                <label for="stock-name">Stock Name:</label>
+                <input type="text" id="stock-name" placeholder="Enter Stock Name" required>
+
+                <label for="stock-quantity">Quantity:</label>
+                <input type="number" id="stock-quantity" placeholder="Enter Quantity" required>
+
+                <label for="stock-rate">Rate:</label>
+                <input type="number" id="stock-rate" placeholder="Enter Rate" required>
+
+                <button type="submit" id="save-stock">Save Stock</button>
+            </form>
         </section>
     </div>
-<script src="stock.js"></script>
+    <script src="stock.js"></script>
 </body>
 </html>

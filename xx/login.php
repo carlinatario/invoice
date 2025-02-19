@@ -1,6 +1,17 @@
 <?php
 session_start();
 require_once 'db_connect.php';
+/*require_once 'google-api-php-client/src/Google_Client.php';
+require_once 'google-api-php-client/src/Google/Service/Oauth2.php';
+
+
+// Google OAuth configuration - Replace with your credentials
+$client = new Google_Client();
+$client->setClientId('INSERT_GOOGLE_CLIENT_ID_HERE');
+$client->setClientSecret('INSERT_GOOGLE_CLIENT_SECRET_HERE');
+$client->setRedirectUri('http://localhost/login.php');
+$client->addScope("email");
+$client->addScope("profile");*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];

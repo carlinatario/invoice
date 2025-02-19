@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="invoice.js" defer></script>
+                        <!-- Add this in the <head> section to include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="connect-container">
+        <div class="header-bar">
+            <h6 id="logout"><a href="logout.php">Logout</a></h6>
+            <div class="icons">
+                <a href="home.html"><i class="fas fa-home"></i></a>  <!-- Home Icon -->
+                <a href="index.html"><i class="fas fa-file-invoice"></i></a>  <!-- Invoice Icon -->
+                <a href="stock.html"><i class="fas fa-boxes"></i></a>  <!-- Stock Icon -->
+            </div>
+        </div>
+        <h6 id="v"><a href="invoice_view.php">viewstock</a></h6>
+    <div class="invoice-container">
+        <header>
+            <h1>Shah G Traders</h1>
+            <h5>Shop No 168, Sheikhupura Road, Gujranwala</h5>
+            <h5>Syed Sultan Haider: 0321 6475975</h5>
+            <h5>Syed Awab Haider: 0322 6475975</h5>
+        </header>
+
+        <section class="invoice-details">
+            <form id="invoice-form" method="POST" action="insert_invoice.php">
+                <p><strong>Billed To:</strong></p><br>
+                <label>Client Name:</label><br>
+                <input type="text" name="customer_name" required><br>
+                <label>Client Address:</label><br>
+                <input type="text" name="customer_address" required><br>
+                <label>Phone Number:</label><br>
+                <input type="tel" name="customer_phone" pattern="[0-9+\-\s]{10,11}" required><br>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Rate</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr>
+                            <td>
+                                <select name="product_id[]" class="product-select" required>
+                                    <option value="">Select Product</option>
+                                    <!-- Products will be loaded dynamically -->
+                                </select>
+                            </td>
+                            <td><input type="number" name="quantity[]" class="quantity" min="1" required></td>
+                            <td><input type="number" name="rate[]" class="rate" readonly></td>
+                            <td class="total-price">0.00</td>
+                                
+                        </tr> 
+                      
+                    </tbody>
+                </table>
+                <div id="action-buttons">
+<button type="button" class="remove-button">-</button>
+<button type="button" class="add-button">+</button>
+                </div>
+                 
+                <p><strong>Total Bill: </strong> <span id="total-bill">0.00</span></p>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
