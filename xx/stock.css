@@ -3,7 +3,7 @@
     justify-content: space-between; /* Spread items apart */
     align-items: center;        /* Align items vertically */
     padding: 10px 20px;         /* Add some padding */
-    background-color: #ffffff;  /* Light background */
+    background-color:linear-gradient(to right, #e0eafc, #cfdef3);  /* Light background */
 }
 
 #logout a {

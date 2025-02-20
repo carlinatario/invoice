@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="invoice.js" defer></script>
+    
                         <!-- Add this in the <head> section to include Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <script src="index.js" defer></script>
     <div class="connect-container">
         <div class="header-bar">
             <h6 id="logout"><a href="logout.php">Logout</a></h6>
@@ -37,7 +39,7 @@
                 <label>Client Address:</label><br>
                 <input type="text" name="customer_address" required><br>
                 <label>Phone Number:</label><br>
-                <input type="tel" name="customer_phone" pattern="[0-9+\-\s]{10,11}" required><br>
+                <input type="tel" name="customer_phoneno" pattern="[0-9+\-\s]{10,11}" required><br>
                 
                 <table>
                     <thead>
@@ -50,22 +52,13 @@
                     </thead>
                     <tbody id="table-body">
                         <tr>
-                            <td>
-                                <select name="product_id[]" class="product-select" required>
-                                    <option value="">Select Product</option>
-                                    <!-- Products will be loaded dynamically -->
-                                </select>
-                            </td>
-                            <td><input type="number" name="quantity[]" class="quantity" min="1" required></td>
-                            <td><input type="number" name="rate[]" class="rate" readonly></td>
-                            <td class="total-price">0.00</td>
-                                
+                            
                         </tr> 
                       
                     </tbody>
                 </table>
-                <div id="action-buttons">
-<button type="button" class="remove-button">-</button>
+                <div id="abs">
+
 <button type="button" class="add-button">+</button>
                 </div>
                  

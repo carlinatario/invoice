@@ -1,5 +1,5 @@
 <?php
-require 'db.php'; // Connect to the database
+require 'db_connect.php'; // Connect to the database
 
 $query = "SELECT s.product_id, p.product_name, s.price_perkg 
           FROM stocks s

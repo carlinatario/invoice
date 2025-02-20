@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="abs">
+        <button type="button" class="remove-button">-</button>
+        <button type="button" class="add-button">+</button>
+    </div>
+</body>
+</html>
+<script>
+    // Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    
+    abs.addEventListener("click", function (e) {
+        console.log("Action buttons container clicked!"); // ADD THIS LINE - Debugging: Is the container even clicked?
+        if (e.target.classList.contains("add-button")) {
+            alert("Add button clicked!"); // ADD THIS LINE - Debugging: Is add button click detected?
+            
+        }
+        if (e.target.classList.contains("remove-button")) {
+            alert("Remove button clicked!"); // ADD THIS LINE - Debugging: Is remove button click detected?
+            
+        }
+    });
+});
+
+</script>

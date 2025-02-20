@@ -1,5 +1,5 @@
 <?php
-require "db_connection.php";
+require "db_connect.php";
 
 $query = "SELECT products.product_id, products.pruduct_name AS product_name, stocks.price_perkg, stocks.quantity AS available_quantity 
           FROM products 

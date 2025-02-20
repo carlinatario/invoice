@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('stock-form').addEventListener('sumbmit', function (event) {
+    document.getElementById('stock-form').addEventListener('submit', function (event) {
         event.preventDefault();
-
         let stockData = {
             sellerName: document.getElementById('seller-name').value.trim(),
             sellerPhone: document.getElementById('seller-phoneno').value.trim(),

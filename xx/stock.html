@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,36 +15,29 @@
             <div class="icons">
                 <a href="home.html"><i class="fas fa-home"></i></a>
                 <a href="invoice.html"><i class="fas fa-file-invoice"></i></a>
-                <a href="view_stock.php"><i class="fas fa-boxes"></i></a> <!-- Updated to view_stock.php -->
+                <a href="view_stock.php"><i class="fas fa-boxes"></i></a>
             </div>
-        </div>     
+        </div>
         <h6 id="v"><a href="view_stock.php">View Stock</a></h6>
         <header>
             <h1>Shah G Traders</h1>
             <p>Shop No 168, Sheikhupura Road, Gujranwala</p>
         </header>
-        
+
         <section class="stock-details">
-            <form id="stock-form">
+            <form id="stock-form" action="insert_stock.php" method="POST"> <form id="stock-form" action="insert_stock.php" method="POST">
                 <label for="seller-name">Seller Name:</label>
-                <input type="text" id="seller-name" placeholder="Enter Seller Name" required>
-
+                <input type="text" id="seller-name" name="sellerName" placeholder="Enter Seller Name" required> 
                 <label for="seller-phoneno">Seller Phone No:</label>
-                <input type="tel" id="seller-phoneno" placeholder="Enter Seller Phone No" pattern="[0-9+\-\s]{10,11}" required>
-
+                <input type="tel" id="seller-phoneno" name="sellerPhone" placeholder="Enter Seller Phone No" pattern="[0-9+\-\s]{10,11}" required> 
                 <label for="stock-name">Stock Name:</label>
-                <input type="text" id="stock-name" placeholder="Enter Stock Name" required>
-
+                <input type="text" id="stock-name" name="stockName" placeholder="Enter Stock Name" required> 
                 <label for="stock-quantity">Quantity:</label>
-                <input type="number" id="stock-quantity" placeholder="Enter Quantity" required>
-
-                <label for="stock-rate">Rate:</label>
-                <input type="number" id="stock-rate" placeholder="Enter Rate" required>
-
-                <button type="submit" id="save-stock">Save Stock</button>
-            </form>
+                <input type="number" id="stock-quantity" name="stockQuantity" min="1" placeholder="Enter Quantity" required>
+                 <label for="stock-rate">Rate:</label>
+                <input type="number" id="stock-rate" name="stockRate" min="1" placeholder="Enter Rate" required>
+                 <button type="submit">Save Stock</button> </form>
         </section>
     </div>
-    <script src="stock.js"></script>
-</body>
+    </body>
 </html>

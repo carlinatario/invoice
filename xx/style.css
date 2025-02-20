@@ -20,25 +20,7 @@
 #v{
   text-align: right;
 }
-.action-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.remove-button, .add-button {
-  padding: 5px 10px;
-  cursor: pointer;
-}
-.remove-button {
-  color:#4031ca;
-  border: none;
-  text-align: right;
-}
-.add-button {
-  color: #4031ca;
-  border: none;
-  text-align: right;
-}
+
 #mybutton {
   padding: 10px 15px;
   font-size: 1rem;
